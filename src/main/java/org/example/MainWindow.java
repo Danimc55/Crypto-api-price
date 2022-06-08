@@ -52,7 +52,7 @@ public class MainWindow {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .header("X-CMC_PRO_API_KEY", "8d9b8375-be05-4c35-9aa9-31d540928356")
+                .header("X-CMC_PRO_API_KEY", "${{API_KEY}}")
                 .uri(URI.create(URL + ticker.toUpperCase()))
                 .build();
         response = client.send(request, HttpResponse.BodyHandlers.ofString());
